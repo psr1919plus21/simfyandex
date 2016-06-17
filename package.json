@@ -1,0 +1,22 @@
+{
+  "name": "simfyandex",
+  "version": "1.0.0",
+  "description": "Test tasks for yandex school simferopol",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "keywords": [
+    "yandexschoolsimferopol"
+  ],
+  "author": "fil gaponenko",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.9.1",
+    "babel-preset-es2015": "^6.9.0"
+  },
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0"
+  }
+}
