@@ -1,3 +1,5 @@
+import {addAchieves} from './addAchieves';
+
 const achievesList = document.querySelector('.profile-achieves');
 const mockAchievesRecievedFromServer = [
   {
@@ -38,19 +40,8 @@ const mockAchievesRecievedFromServer = [
   }
 ]
 
-addAchieves(mockAchievesRecievedFromServer);
+addAchieves(achievesList, mockAchievesRecievedFromServer);
 
-function addAchieves(data) {
-  console.log(data);
-  data.forEach((achieve) => {
-    let newAchieve = document.createElement('li');
-    newAchieve.classList.add('profile-achieves_item');
-    newAchieve.classList.add('profile-achieves_item__' + achieve.type);
-    newAchieve.classList.add('profile-achieves_item__' + achieve.food);
-    achievesList.appendChild(newAchieve);
-  });
-
-}
 
 
 

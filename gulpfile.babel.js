@@ -4,7 +4,9 @@ import gulp from 'gulp';
 import sass from 'gulp-sass';
 import autoprefixer from 'gulp-autoprefixer';
 import imagemin from 'gulp-imagemin';
-import babel from 'gulp-babel';
+import browserify from 'browserify';
+import babelify from 'babelify';
+import source from 'vinyl-source-stream';
 
 const dirs = {
   src: './src',
@@ -40,22 +42,22 @@ gulp.task('imagemin', () => {
     .pipe(gulp.dest(imgPaths.dest));
 })
 
-gulp.task('js', () => {
-  return gulp.src(jsPaths.src)
-    .pipe(babel({
-      presets: ['es2015']
-    }))
+gulp.task('jsbrowserify', () => {
+  return browserify({entries: './src/static/js/achieves.js', extensions: ['.js'], debug: true})
+    .transform(babelify)
+    .bundle()
+    .pipe(source('bundle.js'))
     .pipe(gulp.dest(jsPaths.dest));
-})
+});
 
 gulp.task('watch', ['default'], () => {
   gulp.watch(sassPaths.single, () => {
     gulp.run('sass');
   })
   gulp.watch(jsPaths.src, () => {
-    gulp.run('js');
+    gulp.run('jsbrowserify');
   })
 })
 
-gulp.task('default', ['sass', 'imagemin', 'js']);
+gulp.task('default', ['sass', 'imagemin', 'jsbrowserify']);
 gulp.task('dev', ['watch']);
