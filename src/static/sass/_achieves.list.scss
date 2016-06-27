@@ -1,1 +1,39 @@
-.achieves {background:#f7f7f7;transition:200ms;}
+$achieveBgDefault: #443377;
+$achieveBorderColorDefault: #332266;
+$achieveBgPredator: #ff6666;
+$achieveBorderColorPredator: #ee5555;
+$achieveBgHerbivores: #66ff66;
+$achieveBorderColorHerbivores: #55ee55;
+$achieveBgOmnivorous: #337799;
+$achieveBorderColorOmnivorous: #226688;
+
+.profile-achieves {
+  list-style:none;
+  padding: 0;
+}
+.profile-achieves_item {
+  background: $achieveBgDefault;
+  border-radius: 50%;
+  border:3px solid  $achieveBorderColorDefault;
+  display: inline-block;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  height: 60px;
+  vertical-align: top;
+  width: 60px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+.profile-achieves_item__predator {
+  background: $achieveBgPredator;
+  border-color: $achieveBorderColorPredator;
+}
+.profile-achieves_item__herbivores {
+  background: $achieveBgHerbivores;
+  border-color: $achieveBorderColorHerbivores;
+}
+.profile-achieves_item__omnivorous {
+  background: $achieveBgOmnivorous;
+  border-color: $achieveBorderColorOmnivorous;
+}
