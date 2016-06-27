@@ -1,4 +1,4 @@
-import {addAchieves} from './addAchieves';
+import {createAchieves} from './addAchieves';
 
 const achievesList = document.querySelector('.profile-achieves');
 const mockAchievesRecievedFromServer = [
