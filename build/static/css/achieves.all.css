@@ -1,0 +1,135 @@
+body {
+  font-family: sans-serif; }
+
+.achieves-title {
+  text-align: center; }
+
+.profile {
+  background: #f3f3f3;
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin: 40px auto;
+  max-width: 600px;
+  padding: 10px 20px;
+  width: 100%; }
+
+.profile-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.profile-avatar {
+  min-width: 300px;
+  margin-right: 20px;
+  width: 100%; }
+
+.profile-avatar_img {
+  width: 100%; }
+
+.profile-description_name {
+  font-weight: bold;
+  font-size: 24px; }
+
+.profile-description_info {
+  font-size: 16px;
+  line-height: 22px;
+  margin-top: 8px; }
+
+.profile-achieves {
+  counter-reset: achievesCounter;
+  list-style: none;
+  padding: 0; }
+
+.profile-achieves_item {
+  background: #443377;
+  background-position: center;
+  background-size: 60%;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  border: 5px solid #332266;
+  display: inline-block;
+  height: 60px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  position: relative;
+  vertical-align: top;
+  width: 60px; }
+  .profile-achieves_item:last-child {
+    margin-right: 0; }
+  .profile-achieves_item:before {
+    content: '';
+    background-color: transparent;
+    border: 14px solid #332266;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    box-shadow: 3px 3px 0 0 #332266;
+    color: #434343;
+    border-radius: 50%;
+    box-sizing: border-box;
+    -webkit-transform: rotate(-11deg);
+            transform: rotate(-11deg);
+    height: 0;
+    width: 0;
+    position: absolute;
+    right: -6px;
+    bottom: 2px; }
+  .profile-achieves_item:after {
+    content: counter(achievesCounter);
+    counter-increment: achievesCounter;
+    position: absolute;
+    right: -1px;
+    bottom: 4px; }
+
+.profile-achieves_item__predator {
+  background-color: #ffdada;
+  border-color: #ee5555; }
+  .profile-achieves_item__predator:before {
+    border-right-color: #ffdada;
+    border-bottom-color: #ffdada;
+    box-shadow: 3px 3px 0 0 #ee5555; }
+
+.profile-achieves_item__herbivores {
+  background-color: #dbffdb;
+  border-color: #4fb24f; }
+  .profile-achieves_item__herbivores:before {
+    border-right-color: #dbffdb;
+    border-bottom-color: #dbffdb;
+    box-shadow: 3px 3px 0 0 #4fb24f; }
+
+.profile-achieves_item__omnivorous {
+  background-color: #daf3ff;
+  border-color: #226688; }
+  .profile-achieves_item__omnivorous:before {
+    border-right-color: #daf3ff;
+    border-bottom-color: #daf3ff;
+    box-shadow: 3px 3px 0 0 #226688; }
+
+.profile-achieves_item__cat {
+  background-image: url("../img/achieves/cat.png"); }
+
+.profile-achieves_item__owl {
+  background-image: url("../img/achieves/owl.png"); }
+
+.profile-achieves_item__wolf {
+  background-image: url("../img/achieves/wolf.png"); }
+
+.profile-achieves_item__bear {
+  background-image: url("../img/achieves/bear.png"); }
+
+.profile-achieves_item__rabbit {
+  background-image: url("../img/achieves/rabbit.png"); }
+
+.profile-achieves_item__fish {
+  background-image: url("../img/achieves/fish.png"); }
+
+.profile-achieves_item__dog {
+  background-image: url("../img/achieves/dog.png"); }
+
+.profile-achieves_item__bull {
+  background-image: url("../img/achieves/bull.png"); }
+
+.profile-achieves_item__horse {
+  background-image: url("../img/achieves/horse.png"); }
