@@ -20,7 +20,7 @@ const sassPaths = {
 }
 
 const imgPaths = {
-  src: `${dirs.src}/static/img/*.*`,
+  src: `${dirs.src}/static/img/**/*.*`,
   dest: `${dirs.dest}/static/img/`
 }
 

@@ -7,10 +7,24 @@
   padding: 10px 20px;
   width: 100%;
 }
+.profile-info {
+  display: flex;
+  justify-content: space-between;
+}
 .profile-avatar {
-  max-width: 300px;
+  min-width: 300px;
+  margin-right: 20px;
   width: 100%;
 }
 .profile-avatar_img {
   width: 100%;
+}
+.profile-description_name {
+  font-weight: bold;
+  font-size: 24px;
+}
+.profile-description_info {
+  font-size: 16px;
+  line-height: 22px;
+  margin-top: 8px;
 }

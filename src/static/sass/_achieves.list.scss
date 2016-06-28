@@ -1,10 +1,10 @@
 $achieveBgDefault: #443377;
 $achieveBorderColorDefault: #332266;
-$achieveBgPredator: #ff6666;
+$achieveBgPredator: #ffdada;
 $achieveBorderColorPredator: #ee5555;
-$achieveBgHerbivores: #66ff66;
-$achieveBorderColorHerbivores: #55ee55;
-$achieveBgOmnivorous: #337799;
+$achieveBgHerbivores: #dbffdb;
+$achieveBorderColorHerbivores: #4fb24f;
+$achieveBgOmnivorous: #daf3ff;
 $achieveBorderColorOmnivorous: #226688;
 
 .profile-achieves {
@@ -13,8 +13,11 @@ $achieveBorderColorOmnivorous: #226688;
 }
 .profile-achieves_item {
   background: $achieveBgDefault;
+  background-position: center;
+  background-size: 60%;
+  background-repeat: no-repeat;
   border-radius: 50%;
-  border:3px solid  $achieveBorderColorDefault;
+  border:5px solid  $achieveBorderColorDefault;
   display: inline-block;
   margin-bottom: 20px;
   margin-right: 20px;
@@ -26,14 +29,54 @@ $achieveBorderColorOmnivorous: #226688;
   }
 }
 .profile-achieves_item__predator {
-  background: $achieveBgPredator;
+  background-color: $achieveBgPredator;
   border-color: $achieveBorderColorPredator;
 }
 .profile-achieves_item__herbivores {
-  background: $achieveBgHerbivores;
+  background-color: $achieveBgHerbivores;
   border-color: $achieveBorderColorHerbivores;
 }
 .profile-achieves_item__omnivorous {
-  background: $achieveBgOmnivorous;
+  background-color: $achieveBgOmnivorous;
   border-color: $achieveBorderColorOmnivorous;
 }
+.profile-achieves_item__cat {
+  background-image: url('../img/achieves/cat.png');
+}
+.profile-achieves_item__owl {
+  background-image: url('../img/achieves/owl.png');
+}
+.profile-achieves_item__wolf {
+  background-image: url('../img/achieves/wolf.png');
+}
+.profile-achieves_item__bear {
+  background-image: url('../img/achieves/bear.png');
+}
+.profile-achieves_item__rabbit {
+  background-image: url('../img/achieves/rabbit.png');
+}
+.profile-achieves_item__fish {
+  background-image: url('../img/achieves/fish.png');
+}
+.profile-achieves_item__dog {
+  background-image: url('../img/achieves/dog.png');
+}
+.profile-achieves_item__bull {
+  background-image: url('../img/achieves/bull.png');
+}
+.profile-achieves_item__horse {
+  background-image: url('../img/achieves/horse.png');
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

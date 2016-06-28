@@ -1,4 +1,4 @@
-import {createAchieves} from './addAchieves';
+import {createAchieves} from './createAchieves';
 
 const achievesList = document.querySelector('.profile-achieves');
 const mockAchievesRecievedFromServer = [
@@ -19,7 +19,7 @@ const mockAchievesRecievedFromServer = [
     'food': 'omnivorous'
   },
   {
-    'type': 'rabit',
+    'type': 'rabbit',
     'food': 'herbivores'
   },
   {
@@ -40,7 +40,7 @@ const mockAchievesRecievedFromServer = [
   }
 ]
 
-addAchieves(achievesList, mockAchievesRecievedFromServer);
+createAchieves(achievesList, mockAchievesRecievedFromServer);
 
 
 
