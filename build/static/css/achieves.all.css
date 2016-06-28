@@ -60,52 +60,50 @@ body {
   .profile-achieves_item:last-child {
     margin-right: 0; }
   .profile-achieves_item:before {
-    content: '';
-    background-color: transparent;
-    border: 14px solid #332266;
-    border-top-color: transparent;
-    border-left-color: transparent;
-    box-shadow: 3px 3px 0 0 #332266;
-    color: #434343;
-    border-radius: 50%;
-    box-sizing: border-box;
-    -webkit-transform: rotate(-11deg);
-            transform: rotate(-11deg);
-    height: 0;
-    width: 0;
-    position: absolute;
-    right: -6px;
-    bottom: 2px; }
-  .profile-achieves_item:after {
     content: counter(achievesCounter);
     counter-increment: achievesCounter;
     position: absolute;
     right: -1px;
-    bottom: 4px; }
+    bottom: 4px;
+    z-index: 9; }
+  .profile-achieves_item:after {
+    content: '';
+    position: absolute;
+    right: -11px;
+    box-shadow: -8px -8px 0px 0px #443377 inset;
+    bottom: -3px;
+    border-radius: 50%;
+    border: 5px solid;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    -webkit-transform: rotate(-12deg);
+            transform: rotate(-12deg);
+    height: 28px;
+    width: 27px; }
 
 .profile-achieves_item__predator {
   background-color: #ffdada;
   border-color: #ee5555; }
-  .profile-achieves_item__predator:before {
-    border-right-color: #ffdada;
-    border-bottom-color: #ffdada;
-    box-shadow: 3px 3px 0 0 #ee5555; }
+  .profile-achieves_item__predator:after {
+    box-shadow: -8px -8px 0px 0px #ffdada inset;
+    border-right-color: #ee5555;
+    border-bottom-color: #ee5555; }
 
 .profile-achieves_item__herbivores {
   background-color: #dbffdb;
   border-color: #4fb24f; }
-  .profile-achieves_item__herbivores:before {
-    border-right-color: #dbffdb;
-    border-bottom-color: #dbffdb;
-    box-shadow: 3px 3px 0 0 #4fb24f; }
+  .profile-achieves_item__herbivores:after {
+    box-shadow: -8px -8px 0px 0px #dbffdb inset;
+    border-right-color: #4fb24f;
+    border-bottom-color: #4fb24f; }
 
 .profile-achieves_item__omnivorous {
   background-color: #daf3ff;
   border-color: #226688; }
-  .profile-achieves_item__omnivorous:before {
-    border-right-color: #daf3ff;
-    border-bottom-color: #daf3ff;
-    box-shadow: 3px 3px 0 0 #226688; }
+  .profile-achieves_item__omnivorous:after {
+    box-shadow: -8px -8px 0px 0px #daf3ff inset;
+    border-right-color: #226688;
+    border-bottom-color: #226688; }
 
 .profile-achieves_item__cat {
   background-image: url("../img/achieves/cat.png"); }

@@ -30,28 +30,26 @@ $achieveBorderColorOmnivorous: #226688;
     margin-right: 0;
   }
   &:before {
-    content: '';
-    background-color: transparent;
-    border:14px solid $achieveBorderColorDefault;
-    border-top-color: transparent;
-    border-left-color: transparent;
-    box-shadow: 3px 3px 0 0 $achieveBorderColorDefault;
-    color: #434343;
-    border-radius: 50%;
-    box-sizing: border-box;
-    transform: rotate(-11deg);
-    height: 0;
-    width: 0;
-    position: absolute;
-    right: -6px;
-    bottom: 2px;
-  }
-  &:after {
     content: counter(achievesCounter);
     counter-increment: achievesCounter;
     position: absolute;
     right: -1px;
     bottom: 4px;
+    z-index: 9;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    right: -11px;
+    box-shadow: -8px -8px 0px 0px $achieveBgDefault inset;
+    bottom: -3px;
+    border-radius: 50%;
+    border: 5px solid;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    transform: rotate(-12deg);
+    height: 28px;
+    width: 27px;
   }
 
 
@@ -59,28 +57,28 @@ $achieveBorderColorOmnivorous: #226688;
 .profile-achieves_item__predator {
   background-color: $achieveBgPredator;
   border-color: $achieveBorderColorPredator;
-  &:before {
-    border-right-color: $achieveBgPredator;
-    border-bottom-color: $achieveBgPredator;
-    box-shadow: 3px 3px 0 0 $achieveBorderColorPredator;
+  &:after {
+    box-shadow: -8px -8px 0px 0px $achieveBgPredator inset;
+    border-right-color: $achieveBorderColorPredator;
+    border-bottom-color: $achieveBorderColorPredator;
   }
 }
 .profile-achieves_item__herbivores {
   background-color: $achieveBgHerbivores;
   border-color: $achieveBorderColorHerbivores;
-  &:before {
-    border-right-color: $achieveBgHerbivores;
-    border-bottom-color: $achieveBgHerbivores;
-    box-shadow: 3px 3px 0 0 $achieveBorderColorHerbivores;
+  &:after {
+    box-shadow: -8px -8px 0px 0px $achieveBgHerbivores inset;
+    border-right-color: $achieveBorderColorHerbivores;
+    border-bottom-color: $achieveBorderColorHerbivores;
   }
 }
 .profile-achieves_item__omnivorous {
   background-color: $achieveBgOmnivorous;
   border-color: $achieveBorderColorOmnivorous;
-  &:before {
-    border-right-color: $achieveBgOmnivorous;
-    border-bottom-color: $achieveBgOmnivorous;
-    box-shadow: 3px 3px 0 0 $achieveBorderColorOmnivorous;
+  &:after {
+    box-shadow: -8px -8px 0px 0px $achieveBgOmnivorous inset;
+    border-right-color: $achieveBorderColorOmnivorous;
+    border-bottom-color: $achieveBorderColorOmnivorous;
   }
 }
 .profile-achieves_item__cat {
