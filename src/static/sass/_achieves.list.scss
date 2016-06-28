@@ -8,6 +8,7 @@ $achieveBgOmnivorous: #daf3ff;
 $achieveBorderColorOmnivorous: #226688;
 
 .profile-achieves {
+  counter-reset: achievesCounter;
   list-style:none;
   padding: 0;
 }
@@ -19,26 +20,68 @@ $achieveBorderColorOmnivorous: #226688;
   border-radius: 50%;
   border:5px solid  $achieveBorderColorDefault;
   display: inline-block;
+  height: 60px;
   margin-bottom: 20px;
   margin-right: 20px;
-  height: 60px;
+  position: relative;
   vertical-align: top;
   width: 60px;
   &:last-child {
     margin-right: 0;
   }
+  &:before {
+    content: '';
+    background-color: transparent;
+    border:14px solid $achieveBorderColorDefault;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    box-shadow: 3px 3px 0 0 $achieveBorderColorDefault;
+    color: #434343;
+    border-radius: 50%;
+    box-sizing: border-box;
+    transform: rotate(-11deg);
+    height: 0;
+    width: 0;
+    position: absolute;
+    right: -6px;
+    bottom: 2px;
+  }
+  &:after {
+    content: counter(achievesCounter);
+    counter-increment: achievesCounter;
+    position: absolute;
+    right: -1px;
+    bottom: 4px;
+  }
+
+
 }
 .profile-achieves_item__predator {
   background-color: $achieveBgPredator;
   border-color: $achieveBorderColorPredator;
+  &:before {
+    border-right-color: $achieveBgPredator;
+    border-bottom-color: $achieveBgPredator;
+    box-shadow: 3px 3px 0 0 $achieveBorderColorPredator;
+  }
 }
 .profile-achieves_item__herbivores {
   background-color: $achieveBgHerbivores;
   border-color: $achieveBorderColorHerbivores;
+  &:before {
+    border-right-color: $achieveBgHerbivores;
+    border-bottom-color: $achieveBgHerbivores;
+    box-shadow: 3px 3px 0 0 $achieveBorderColorHerbivores;
+  }
 }
 .profile-achieves_item__omnivorous {
   background-color: $achieveBgOmnivorous;
   border-color: $achieveBorderColorOmnivorous;
+  &:before {
+    border-right-color: $achieveBgOmnivorous;
+    border-bottom-color: $achieveBgOmnivorous;
+    box-shadow: 3px 3px 0 0 $achieveBorderColorOmnivorous;
+  }
 }
 .profile-achieves_item__cat {
   background-image: url('../img/achieves/cat.png');
